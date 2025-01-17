@@ -1,0 +1,292 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: "Playfair", serif;
+    background: linear-gradient(135deg, #8a8a8a, #4d4d4d); 
+    color: #fdfdfd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+/* General Styles */
+
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+button {
+    background: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #45a049;
+}
+
+#privateMsgs {
+    margin-top: 20px;
+}
+
+.privMsg {
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    margin: 20px 0;
+    padding: 15px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.privMsg h1 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #009000;
+    text-align: center;
+}
+
+.privMsg input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.privMsg button {
+    background: #009000;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-left: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.privMsg button:hover {
+    background: #0056b3;
+}
+
+/* Connection Status */
+#connectionStatus {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #28a745;
+    font-weight: bold;
+}
+
+/* Typing Indicator */
+#typing {
+    font-style: italic;
+    color: #6c757d;
+    margin-top: 5px;
+}
+
+/* User List Styling */
+#connectedUsers {
+    margin-top: 20px;
+}
+
+#connectedUsers li {
+    margin: 5px 0;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#connectedUsers button {
+    font-size: 0.9rem;
+    padding: 5px 10px;
+}
+
+/* Alerts for Self-Messages */
+#connectedUsers span {
+    color: #dc3545;
+    font-size: 0.9rem;
+    margin-left: 10px;
+}
+
+/* Grid Layout */
+#gridContainer {
+    display: grid;
+    margin-top: 5vh;
+    grid-template-columns: 3fr 1fr;
+    height: 90vh;
+    width: 90vw;
+    background: rgba(25, 25, 25, 0.8); /* Dark overlay */
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+/* Chat App */
+#chatApp {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px 0 0 15px;
+    overflow-y: auto;
+}
+
+#connectionStatus {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #1abc9c; /* Teal */
+}
+
+#typing {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #f1c40f; /* Yellow */
+}
+
+#messages {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#messages > li {
+    padding: 0.8rem;
+    margin-bottom: 0.5rem;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    color: #fdfdfd;
+    transition: transform 0.2s, background 0.3s;
+}
+
+#messages > li:hover {
+    transform: scale(1.02);
+    background: rgba(0, 0, 0, 0.7);
+}
+
+/* Connected Users */
+#listOfUsers {
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 0 15px 15px 0;
+    overflow-y: auto;
+    color: #fdfdfd;
+}
+
+#connectedUsers {
+    margin-top: 1rem;
+    list-style: none;
+    padding: 0;
+}
+
+#connectedUsers li {
+    padding: 0.6rem;
+    margin-bottom: 0.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    transition: background 0.3s;
+    color: #dcdde1; /* Light gray */
+}
+
+#connectedUsers li:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Form Section */
+#grpMsgForm {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 0.6rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    height: 3rem;
+    border-radius: 0 0 15px 15px;
+}
+
+#grpMsgInput {
+    border: none;
+    padding: 0.5rem 1rem;
+    flex-grow: 1;
+    border-radius: 25px;
+    background: #dcdde1; /* Light gray */
+    color: #333;
+    font-size: 1rem;
+}
+
+#grpMsgInput:focus {
+    outline: none;
+    background: #ffffff;
+}
+
+#grpMsgForm > button {
+    background: linear-gradient(45deg, #e74c3c, #f39c12); 
+    border: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+}
+
+#grpMsgForm > button:hover {
+    background: linear-gradient(45deg, #f39c12, #e74c3c);
+    transform: scale(1.1);
+}
+
+/* Create Group Button */
+#createGrp {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: linear-gradient(45deg, #e74c3c, #f39c12);
+    border: none;
+    padding: 0.5rem 1.2rem;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+    transition: background 0.3s, transform 0.2s;
+}
+
+#createGrp:hover {
+    background: linear-gradient(45deg, #f39c12, #e74c3c);
+    transform: scale(1.1);
+}
+
+/* Private Messages */
+#privateMsgs {
+    padding: 1rem;
+}
+
+.privMsg > li {
+    padding: 0.6rem;
+    margin: 0.3rem 0;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    color: #ecf0f1;
+    transition: background 0.3s;
+}
+
+.privMsg > li:hover {
+    background: rgba(0, 0, 0, 0.7);
+}

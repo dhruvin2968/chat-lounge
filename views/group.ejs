@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap" rel="stylesheet">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/group.css">
+    <script src="/socket.io/socket.io.js" defer></script>
+    <script src="/group.js" defer></script>
+    <script>
+        const grpName = '<%= grpName %>';
+        const grpID = '<%= grpID %>';
+    </script>
+    <title><%= grpName %> Group Chat 💬</title>
+</head>
+<body>
+    <h5>Welcome to <%= grpName %> Group Chat 💬❤️</h5>
+    <button id="leaveGrp">Leave Group 👋</button>
+    <div id="gridContainer">
+        <!-- Chat Area -->
+        <div id="chatApp">
+            <p id="connectionStatus"></p>
+            <p id="typing"></p>
+            <ul id="messages"></ul>
+        </div>
+        <!-- Connected Users Area -->
+        <div id="listOfUsers">
+            <h1>Connected Users</h1>
+            <ul id="connectedUsers"></ul>
+        </div>
+    </div>
+    <!-- Message Form -->
+    <form id="grpMsgForm" action="">
+        <input id="grpMsgInput" autocomplete="off" placeholder="Type your message...">
+        <button>Send</button>
+    </form>
+</body>
+</html>
