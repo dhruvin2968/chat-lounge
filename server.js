@@ -5,7 +5,7 @@ const server = http.createServer(app)
 const {Server} = require('socket.io')
 const io = new Server(server)
 const {v4: generateRandomID} = require('uuid')
-const port = 3000
+const port = process.env.PORT
 
 app.use(express.static('client'))
 app.set('view engine', 'ejs')
